@@ -10,9 +10,6 @@ services:
     restart: always
   keycloak:
     image: "ghcr.io/pccsuite/pcckeycloak"
-    build:
-      context: ./keycloak_build
-      dockerfile: Dockerfile
     environment:
       - KEYCLOAK_ADMIN=admin
       - KEYCLOAK_ADMIN_PASSWORD
@@ -22,7 +19,6 @@ services:
       - KC_DB_URL=jdbc:postgresql://postgres:5432/keycloak
     depends_on:
       - postgres
-    pull_policy: build
     restart: always
   postgres:
     image: postgres:13.0-alpine
