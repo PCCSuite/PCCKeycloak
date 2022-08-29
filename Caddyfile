@@ -1,0 +1,8 @@
+{
+	auto_https off
+}
+:80 {
+	reverse_proxy /keycloak/* http://keycloak:8080
+	redir / /keycloak/
+	redir /keycloak /keycloak/
+}

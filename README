@@ -1,0 +1,9 @@
+# How to deploy
+
+`cp default.env .env`
+Edit `.env`
+`docker compose up -d`
+
+## Update
+`git pull`
+`docker compose up`
