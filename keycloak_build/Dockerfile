@@ -4,7 +4,6 @@ FROM quay.io/keycloak/keycloak:latest as builder
 
 ENV KC_HEALTH_ENABLED=true \
     KC_METRICS_ENABLED=true \
-    KC_FEATURES=token-exchange \
     KC_DB=postgres \
     KC_HTTP_RELATIVE_PATH=/keycloak
 # Install custom providers

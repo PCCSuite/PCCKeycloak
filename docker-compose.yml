@@ -19,6 +19,7 @@ services:
       - KC_DB_URL=jdbc:postgresql://postgres:5432/keycloak
     depends_on:
       - postgres
+    pull_policy: always
     restart: always
   postgres:
     image: postgres:13.0-alpine
@@ -28,5 +29,5 @@ services:
       - POSTGRES_PASSWORD=${KC_DB_PASSWORD}
     volumes:
       - ${KEYCLOAK_DATADIR}:/var/lib/postgresql/data
-    pull_policy: build
+    pull_policy: always
     restart: always

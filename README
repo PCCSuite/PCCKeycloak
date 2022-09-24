@@ -2,10 +2,8 @@
 
 `cp default.env .env`
 Edit `.env`
-`docker build keycloak_build -t ghcr.io/pccsuite/pcckeycloak`
 `docker compose up -d`
 
 ## Update
 `git pull`
-`docker build keycloak_build -t ghcr.io/pccsuite/pcckeycloak`
 `docker compose up -d`
